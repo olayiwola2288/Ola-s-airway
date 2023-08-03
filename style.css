@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navbarScroll{
+    display: flex;
+    justify-content: space-between;
+}
+#firs{
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    background-image: url(images/pexels-quintin-gellar-321159.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+}
+#logo{
+    display: inline;
+}
+nav {
+    background-color: rgba(76, 76, 100, 0.5);
+}
+nav a:hover {
+    color: black !important;
+}
+#pills-tabContent{
+    background-color:  rgba(10, 9, 62, 0.5);
+}
+
+/* #bookcon {
+    margin-left: 100px !important;
+    margin-right: 200px !important;
+} */
+#pills-home-tab,#pills-profile-tab,#pills-contact-tab,#pills-flight-tab{
+    background-color:  rgba(10, 9, 62, 0.2);
+    color: white;
+    border: none;
+}
+#pills-home-tab:hover,#pills-profile-tab:hover,#pills-contact-tab:hover,#pills-flight-tab:hover{
+    background-color: #34000D;
+}
+#searchButton{
+    background-color:#34000D;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0 !important;
+    /* margin-left:auto ;
+    margin-right: 0; */
+}
+#searchButton:hover{
+    background-color: #14394C;
+}
+#EXPERIENCE{
+    background-color: rgba(10, 49, 82, 0.8);
+    padding: 60px 0 120px;
+}
+#imagesBackHover:hover{
+    background-color: rgba(10, 49, 82, 0.8);
+    padding: 60px 0 230px;
+    /* display: none; */
+    transition: 30ms ease-in;
+}
+.imgText {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cityContainer {
+    overflow: hidden;
+    transition: 4s ease-in-out !important;
+}
+
+.cityContainer:hover img {
+    transform: scale(1.5);
+}
+#imagesBack{
+    background-image: url(images/9.jpg);
+    height: 500px;
+    width: 450px;
+    object-fit: fill;
+    /* background-attachment: fixed; */
+    background-position: center;
+    
+
+
+}
+
+

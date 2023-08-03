@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola's Airways</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/85d3ba5abe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg justify-content-between px-5 py-2">
+            <a class="navbar-brand" href="#"><img src="images/logo-no-background.png" alt="" width="70px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="#"><i
+                                class="fa-solid fa-house-chimney me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#"><i class="fa-solid fa-file me-2"></i>Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#"><i class="fa-solid fa-phone-volume me-2"></i>Contact
+                            Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fa-regular fa-registered me-2"></i>Register with Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Sign-up</a></li>
+                            <li><a class="dropdown-item" href="#">Log-in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="col-lg-7">
+            <div class="col-12 mx-auto">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="active mx-1 px-2" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">
+                            <i class="fa-solid fa-plane"></i>
+                            <span class="d-none d-sm-inline-block p-2">FLIGHTS</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                            type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
+                            class="mx-1 px-2 buttonHead">
+                            <i class="fa-brands fa-staylinked"></i>
+                            <span class="d-none d-sm-inline-block p-2">MANAGE BOOKINGS</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                            type="button" role="tab" aria-controls="pills-contact" aria-selected="false"
+                            class="mx-1 px-2 buttonHead">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span class="d-none d-sm-inline-block p-2">ONLINE CHECK-IN</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button id="pills-flight-tab" data-bs-toggle="pill" data-bs-target="#pills-flight" type="button"
+                            role="tab" aria-controls="pills-flight" aria-selected="false" class="mx-1 px-2 buttonHead">
+                            <i class="fa-solid fa-circle-dot"></i>
+                            <span class="d-none d-sm-inline-block p-2">ONLINE CHECK-IN</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab">
+                        <div class="container text-light">
+                            <h2 class="my-4">BOOK FLIGHT TICKETS</h2>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="round-trip"><small>ROUND TRIP</small></label>
+                                    <input type="radio" id="round-trip" name="flight-type" checked>
+                                </div>
+                                <div class="col-6">
+                                    <label for="one-way"><small>ONE-WAY</small></label>
+                                    <input type="radio" id="one-way" name="flight-type">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <label for="from"><small>FLYING FROM</small></label><br>
+                                    <input type="text" id="from" placeholder="From" class="px-5 py-2 mb-3">
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <label for="to"><small>FLYING TO</small></label><br>
+                                    <input type="text" id="to" placeholder="To" class="px-5 py-2 mb-3">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <label for="departure-date"><small>DEPARTURE DATE</small></label><br>
+                                    <input type="date" id="departure-date" class="px-5 py-2 mb-3">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 d-lg-flex mt-5 gap-5">
+                                    <div class="col-lg-3 col-10">
+                                        <label for="adult">ADULT</label><br>
+                                        <select name="adult" id="adult" <select name="adult" id="adult"
+                                            class="px-5 py-2 mb-2">
+                                            <option value="">ADULT</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-10">
+                                        <label for="child">CHILD</label><br>
+                                        <select name="child" id="child" class="px-5 py-2">
+                                            <option value="">CHILD</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-10">
+                                        <label for="infant">INFANT</label><br>
+                                        <select name="infant" id="infant" class="px-5 py-2">
+                                            <option value="">INFANT</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end me-2">
+                            <button id="searchButton">FLIGHT SEARCH</button>
+                        </div>
+                        <div>
+                            <button class="alert alert-info p-2 ms-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">covid-19 Flight Resumption:Passenger Info</button>
+
+                            <button class="alert alert-info p-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">Press Release</button>
+                            <!-- modal operators for the first button -->
+                            <div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <small class="modal-title fs-5" id="exampleModalLabel">Flight
+                                                    Resumption: Passengers Information</small>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul>
+                                                    <li>Check-in counters open 4 hours before scheduled flight time and
+                                                        close 30 minutes before flight departure. It is important that
+                                                        you arrive at the airport in good time so as to have ample time
+                                                        to undergo all security and pandemic health protocols before the
+                                                        flight.</li>
+                                                    <li>We strongly advise that you buy your ticket online as well as
+                                                        check-in online to reduce or eliminate physical contact with
+                                                        frontline personnel at the airport.</li>
+                                                    <li>Download the Ola's mobile App, this way you can save your
+                                                        boarding pass to your phone and avoid printing a physical
+                                                        boarding pass. Ola's mobile App is free to download on Google
+                                                        Play store and IOS App Store.</li>
+                                                    <li>All passengers must arrive at the airport properly kitted with
+                                                        their face masks on and throughout the flight.</li>
+                                                    <li>Hand sanitizers will be provided for passengers’ use before
+                                                        entrance, at the waiting halls/lounges and pre boarding gates.
+                                                    </li>
+                                                    <li>All Footwear would be disinfected/sanitized by foot mats placed
+                                                        at all entrances of the terminal building.</li>
+                                                    <li>Passengers would observe physical distancing rule while sitting
+                                                        in the waiting/departure halls. The floors will be clearly
+                                                        marked for this purpose.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- modal operators for the second button -->
+                            <div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <small class="modal-title fs-5" id="exampleModalLabel">Ola's Air
+                                                    reinstates flights to Sokoto, Kano</small>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul>
+                                                    <li>Ola's Air is resuming flight operations from Abuja to Sokoto and
+                                                        Kano effective September 3, 2025.</li>
+                                                    <li>Flights from Abuja to Sokoto and Abuja to Kano will operate
+                                                        weekly every Tuesday, Thursday and Saturday. Lagos passengers
+                                                        can also connect seamlessly to either of the two destinations
+                                                        via Abuja.</li>
+                                                    <li>The decision to reinstate flights to Sokoto and Kano was
+                                                        informed by the yearnings of customers in those areas for the
+                                                        real Ola's Air experience.</li>
+                                                    <li>Ola's Air Chief Executive Officer, Captain Roy Ilegbodu
+                                                        commented: “As a leading Nigerian carrier, we take the feedback
+                                                        of our customers seriously. We will continue to serve our
+                                                        customers to the best of our ability at all times.”</li>
+                                                    <li>For the best fares, customers are advised to book online at
+                                                        www.arikair.com or download the Arik Air Mobile App on Google
+                                                        Play or App Store.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn btn-light text-danger mt-2 mb-5 mx-5">
+                            <marquee behavior="scroll" direction="left">Dear Esteemed Guest, Due to a system upgrade,
+                                our Call Centre number 01-2799999 is currently unavailable. You can reach us real time
+                                via 07-0000-3592745 (FLYARIK) We look forward to hearing from you soon.
+                                2799999 is currently unavailable. You can reach us real time via 07-0000 (FLYARIK) We
+                                look forward to hearing from you soon.</marquee>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="text-light">
+                            <h3 class="ps-5">MANAGE YOUR BOOKINGS</h3>
+                            <div class="row">
+                                <div class="ms-5">
+                                    <label for="REFERENCE"><small>REFERENCE NUMBER</small></label><br>
+                                    <input type="text" id="REFERENCE" class="col-10 py-2" placeholder="EG:LM6AG1">
+                                </div>
+                                <div class="ms-5">
+                                    <label for="LAST" class="pt-4"><small>LAST NAME</small></label><br>
+                                    <input type="text" id="LAST" class="col-10 py-2" placeholder="EG:OLAWALE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end me-2">
+                            <button id="searchButton">FLIGHT SEARCH</button>
+                        </div>
+                        <div>
+                            <button class="alert alert-info p-2 ms-5">covid-19 Flight Resumption:Passenger Info</button>
+                            <button class="alert alert-info p-2">Press Release</button>
+                        </div>
+                        <div class="btn btn-light text-danger mt-2 mb-5 mx-5">
+                            <marquee behavior="scroll" direction="right">Dear Esteemed Guest, Due to a system
+                                upgrade,our Call Centre number 01-2799999 is currently unavailable. You can reach us
+                                real timevia 07-0000-3592745 (FLYARIK) We look forward to hearing from you soon.2799999
+                                is currently unavailable. You can reach us real time via 07-0000 (FLYARIK) Welook
+                                forward to hearing from you soon.</marquee>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="text-light">
+                            <h3 class="ps-5">ONLINE CHECK-IN</h3>
+                            <div class="row">
+                                <div class="ms-5">
+                                    <label for="REFERENCE"><small>REFERENCE NUMBER</small></label><br>
+                                    <input type="text" id="REFERENCE" class="col-10 py-2" placeholder="EG:LM6AG1">
+                                </div>
+                                <div class="ms-5">
+                                    <label for="LAST" class="pt-4"><small>First NAME</small></label><br>
+                                    <input type="text" id="LAST" class="col-10 py-2" placeholder="EG:OLAWALE">
+                                </div>
+                                <div class="ms-5">
+                                    <label for="LAST" class="pt-4"><small>LAST NAME</small></label><br>
+                                    <input type="text" id="LAST" class="col-10 py-2" placeholder="EG:ayomide">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end me">
+                            <button id="searchButton">submit</button>
+                        </div>
+                        <div>
+                            <button class="alert alert-info p-2 ms-5">covid-19 Flight Resumption:Passenger Info</button>
+                            <button class="alert alert-info p-2">Press Release</button>
+                        </div>
+                        <div class="btn btn-light text-danger mt-2 mb-5 mx-5">
+                            <marquee behavior="scroll" direction="right">
+                                Dear Esteemed Guest, Due to a system upgrade, our Call Centre number 01-2799999 is
+                                currently unavailable. You can reach us real-time via 07-0000-3592745 (FLYARIK). We look
+                                forward to hearing from you soon. Our Call Centre number 01-2799999 is currently
+                                unavailable. You can reach us real-time via 07-0000 (FLYARIK). We look forward to
+                                hearing from you soon.
+                            </marquee>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-flight" role="tabpanel" aria-labelledby="pills-flight-tab">Lore
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section>
+        <div class=" d-lg-flex d-block justify-content-center gap-5" style="background-color: #fff;">
+            <div class="text-center px-5">
+                <img src="images/search-removebg-preview.png" alt="" width="65%">
+                <h5>SEARCH</h5>
+                <p class="pb-5">Search for flights to a destination of your choice <br> within Nigeria, Ghana, Liberia
+                    and Senegal.</p>
+            </div>
+            <div class="text-center px-5">
+                <img src="images/trolly-removebg-preview.png" alt="" width="65%">
+                <h5>SELECT</h5>
+                <p class="pb-5">Flights are scheduled for your comfort <br> convenience.</p>
+            </div>
+            <div class="text-center px-5">
+                <img src="images/book-removebg-preview.png" alt="" width="65%">
+                <h5>BOOK</h5>
+                <p class="pb-5">Book your flights and pay online with an option to <br> book on-hold and pay later.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="EXPERIENCE">
+        <div>
+            <h1 class="text-center text-light mb-5">GET THE BEST EXPERIENCE</h1>
+            <div class="mx-auto col-8 d-lg- flex">
+                <div id="imagesBack" class="d-flex justify-content-center">
+                    <div id="imagesBackHover" class="text-center text-light fw-bold my-auto">
+                        <h3 class="mt-5 text-decoration-underline ">Ola's Affinity Wings</h3>
+                        <p class="mt-3 ">Join Ola's Affinity Wings today and earn miles while you fly.</p>
+                        <button style="background-color: #34000D; padding: 10px; color: #fff;">Join</button>
+                    </div>
+                    <!-- <img src="images/9.jpg" alt="" width="30%"> -->
+                    <!-- </div>
+                <div id="imagesBack" class="d-flex justify-content-center">
+                    <!-- <img src="images/9.jpg" alt="" width="30%"> -->
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #fff;">
+        <div>
+            <h2 class="text-center py-5">TOP DESTINATIONS</h2>
+            <!-- <div class="d-lg-flex mb-sm-2 justify-content-center"> -->
+            <div class="row animate__animated animate__backInRight">
+                <!-- <div class="d-lg-flex mb-sm-2 justify-content-center gap-3 flex-colum"> -->
+                <div class=" d-lg-flex  mb-sm-2 justify-content-center gap-3">
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/Destinations-Abuja-2.jpg" alt="" class=" col-11 w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">Abuja
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/Destinations-Ilorin-2.jpg" alt="" class=" col-11 w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">Ilorin
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/Destinations-jos.jpg" alt="" class=" col-11 w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">jos
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/Destinations-kano.jpg" alt="" class=" col-11 w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">kano
+                        </div>
+                    </div>
+                </div>
+                <div class="d-lg-flex mb-sm-2 justify-content-center gap-3">
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/Destinations-Lagos.jpg" alt="" class="  w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">Lagos
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/Destinations-Owerri.jpg" alt="" class=" col-11 w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">Owerri
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/Destinations-Yola.jpg" alt="" class=" col-11 w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">Yola
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-11 ps-3 position-relative cityContainer">
+                        <img src="images/tour8.jpg" alt="" class=" col-11 w-100 h-100">
+                        <div class="text-center w-100 text-white fw-bold p-2 position-absolute bottom-0 imgText">Ibadan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section style="background-color: #07253f; padding: 120px 0;">
+        <div class="grid container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+                <div class="col text-light">
+                    <img src="images/logo-no-background.png" alt="" width="20%" class="mb-3">
+                    <p>Book flights to and from Nigeria & West Africa with Ola's Air, West-Africa's leading airline
+                        offering domestic, regional and international flights..</p>
+                </div>
+                <div class=" col text-light">
+                    <button class="btn btn-info m-2" data-bs-toggle="modal" data-bs-target="#exampleModal3">Ola's Air
+                        Terms & conditions</button>
+                </div>
+                <div class="col text-light ">
+                    <h3>CONTACT US</h3>
+                    <p> <i class="fa-solid fa-mobile-retro p-2"></i> Head Office:Ola's on Centre, Muritala Muhammed
+                        Airport (Domestic Wing), Ikeja, Lagos</p>
+                    <p><i class="fa-solid fa-phone borderd borderd-rounded p-2"></i> 01 279 9999</p>
+                </div>
+                <div class="col text-light">
+                    <button class="btn btn-info m-2" data-bs-toggle="modal" data-bs-target="#exampleModal4"> Baggage policy</button><br>
+                    <button class="btn btn-info m-2" data-bs-toggle="modal" data-bs-target="#exampleModal5"> Annual Report & Finance Statements</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #0A3152;padding: 20px;">
+        <div>
+            <small class="text-light px-5">Copyright © 2023 Arik Air Limited. All Rights Reserved.</small>
+        </div>
+    </section>
+    <div>
+        <!-- modal for terms & conditions -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Baggage Policy</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Your Baggage
+
+                            Hand baggage includes those items, which passengers may take into the aircraft and store under the seat in front or in the overhead storage compartments. Common examples include: • A bag, not exceeding 55x35x25 cm • One overcoat or raincoat • An umbrella or walking stick; • One camera, one video camera or one portable CD player • A reasonable quantity of newspapers, magazines or books for the journey • One handbag or one briefcase or one laptop computer • Items bought at the airport "Duty Free" shop in limited quantity and dimension • Food for infants necessary during the journey • One carry-cot or folding pram • One folding wheelchair, a set of crutches or similar devices on which a disabled passenger may dependant.
+                            
+                            For all Arik Air flights, the hand baggage allowance is ONE PIECE weighing a maximum of 6kg in weight ONLY (maximum dimensions allowed are 55cms x 35cms x 25cms).
+                            
+                            On ALL International flights departing Nigeria there is a 100% ban on all liquids and gels in hand baggage.
+                            
+                            Guests travelling out of Lagos to New York JFK must anticipate enhanced security measures and as such should arrive at the airport for check in and security processing 4 hours before departure time. Passengers are advised that ONE PIECE ONLY of hand baggage may be taken into the aircraft cabin.
+                            
+                            Checked in free baggage allowance.
+                            
+                            Checked in baggage includes all those items which are weighted and carried in the aircraft and are not accessible to passengers during flight. It must consist of suitcases or containers that are sufficiently rigid and resistant to the stress caused by normal handling so as to ensure safe transport without special requirements.
+                            
+                            There is no checked in baggage allowance for infants, only hand baggage will be accepted. Free baggage allowance detailed information is published in Arik Air Checked Baggage Policy document.
+                            
+                            To comply with Health & Safety requirements, Arik Air Limited has instituted a maximum weight for single items of checked baggage. Arik Air will not accept baggage that exceeds 30kg (661bs) in weight, per any single piece of baggage (except Lagos-Freetown-Banjul-Dakar route and v.v.). This policy relates only to single items of baggage and does not affect your overall baggage allowance reflected on your ticket, which remains unchanged.
+                            
+                            Excess baggage
+                            
+                            You will be required to pay an extra charge for carriage of baggage in excess of the free baggage allowance (as stipulated in our conditions and limitations). These rates are published in Arik Air
+                            
+                            Checked Baggage Policy document.
+                            
+                            Excess baggage charges are collected in the local currency. Carriage of excess baggage is subject to available space on your flight. The total number of bags allowed for any passenger is up to 10 pieces per passenger.
+                            
+                            Special baggage
+                            
+                            It is permitted to transport ski equipment, golf bags, surfs and windsurfs, bicycle etc, as registered baggage against space availability and payment of special excess baggage supplement. Contact your travel agent, the nearest Arik Air ticket office or Call Center for more information.
+                            
+                            Prohibited items
+                            
+                            It's forbidden to carry the following items: • Disabling devices, • Briefcases with alarm devices installed • Gases (flammable, non flammable or toxic) such as camping gases • Flammable liquids, such as lighter-fuels, varnishes and thinners • Lighters with non absorbable gases and refills • Explosives, ammunition, fireworks and rockets • Flammable solids such as "strike anywhere" matches and highly flammable items • Substances which emit flammable gases on contact with water • Oxidizing materials (such as bleaching powder and peroxide) • Infectious and toxic materials • Radioactive materials • Corrosive materials (such as mercury, acids, alkali) • Magnetized materials and other similarly dangerous products • Personal medical oxygen devices that utilize liquid oxygen. • Fuel cell systems and spare fuel cartridges • Any permitted sharp objects contained in checked in baggage should be securely wrapped to prevent injury to baggage screeners and handling personnel.
+                            
+                            In your checked baggage, you must not include fragile or perishable items, valuable items (including, but not limited to, money, jewels, precious metals), computers, personal electronic devices, any medication or medical equipment which may be required in-flight or during your trip or which cannot be replaced at short notice if lost or damaged, house or car keys, valuable documents (including, but not limited to, business documents, passports and other identification documents, negotiable papers, securities, deeds), or product samples. You must not include in hand baggage real, replica or toy weapons (plastic or metal), or any object which looks like a weapon or could reasonably be mistaken for a weapon, tradesmens' tools, ammunition, explosives or anything which contains explosives, catapults, darts, household cutlery, scissors, corkscrews, metal nail files, knives with blades of any length, knitting needles, paper knives, sporting bats and clubs, razor blades (except safety razors and accompanying cartridges), billiard, snooker or pool cues, hypodermic needles (except those required for medical reasons and accompanied by a medical certificate confirming the medical condition), hard sporting balls or martial arts devices, safety matches or lighters.
+                            
+                            Liquids contained in hand baggage
+                            
+                            Government authorities in many countries have now defined restrictions on the type and quantity of liquids that may be carried in hand baggage through the airport, or on flights arriving into or departing from their country.
+                            
+                            The European Union agreed a policy that brings into line all EU countries. The EU rules on liquids apply to all air passengers travelling from any EU airport, including UK airports, regardless of their destination. Currently, limited quantities of liquids, gels or pastes can be held in individual containers not exceeding 100ml. This may include: • Medicines • Shampoo • Creams • Hair gel, hair spray • Suntan lotions • Toothpaste • Liquid or aerosol deodorants • Perfumes • Cosmetics such as mascara and lip gloss • Water and other drinks, soups and syrups • Other items of similar consistency.
+                            
+                            The containers must be carried in a separate clear plastic, zip-top or re-sealable bag that does not exceed 20cm x 20cm (8 x 8 inches) or equivalent to one litre (1.75 pint) capacity. Items must fit in the bag comfortably and the bag must be completely closed. At the airport security search, the plastic bag must be removed from the cabin bag and x-ray screened separately.
+                            
+                            Baggage label
+                            
+                            We recommend you complete and attach name tags both on the outside and inside of your checked in baggage.
+                            
+                            Lost Baggage
+                            
+                            Whilst we will make every attempt to ensure your luggage is handled with care, you should know that Arik Air's liability for loss, delay or damage to baggage is limited unless a higher value is declared in advance and additional charges paid. The airline does not accept liability for fragile, valuable, perishable articles or baggage which is packed in damaged or unsuitable containers. We strongly recommend all passengers obtain adequate travel insurance cover prior to their journey. Should you find that your baggage is damaged or has not arrived, please contact the Arik Air staff (or our handling agent) immediately. Details of your baggage will be taken and you will be offered immediate assistance.
+                            
+                            If your baggage has been delayed, arrangements will be made to have it delivered to your local address, provided it is within the airport city, when it arrives.
+                            
+                            Notice of missing baggage, damage, or pilferage of checked baggage must be given to Arik Air at the airport within 4 hours of the arrival of your flight. To help us process your claim quickly, please complete and enclose the following documentation: • Property Irregularity Report (PIR) • A copy of your travel ticket and baggage tag • Checked-in luggage receipt if any • A detailed list of the missing luggage items • Receipts of the contents of the baggage • A copy of the MCC) of declaration of value, if made, and in the case where excess baggage was paid.
+                            
+                            When making your report for delay or damage, and provide your flight confirmation number and copies of any relevant receipts, please be advised that replacement receipts cannot be accepted for damage baggage claims. We strongly recommend that passengers retain all original receipts applicable to their baggage claim. Any damaged items must be retained by the passenger until the claim has been finalized by the airline or insurance company.
+                            
+                            Under Arik Air's General Conditions of Carriage we accept no liability for the loss of money, jewellery, precious metals, tobacco products, keys, cameras, computers, medicines, spectacles, sunglasses, contact lenses, watches, mobile phones, personal electronic devices, negotiable papers, securities or other valuables, business documents, passports and other identification documents or samples either on your person or in your cabin baggage.
+                            
+                            Upon receipt of you claim, claims for damaged baggage will be processed within 14 working days. Claims for lost baggage will be processed within 28 working days (to allow for a full trace to be completed on the lost baggage). We will respond, as outlined in our Customer Charter, to the address that was provided at the point of reservation.
+                            
+                            *Arik Air does not accept any responsibility for personal belongings misplaced or lost on board the aircraft or in the airport terminal. Any items found on board are forwarded directly to the lost property offices at the destination airport.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="alert alert-light"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- modal for terms & conditions -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ola's Air Terms & Conditions</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Your Baggage
+
+                            Hand baggage includes those items, which passengers may take into the aircraft and store under the seat in front or in the overhead storage compartments. Common examples include: • A bag, not exceeding 55x35x25 cm • One overcoat or raincoat • An umbrella or walking stick; • One camera, one video camera or one portable CD player • A reasonable quantity of newspapers, magazines or books for the journey • One handbag or one briefcase or one laptop computer • Items bought at the airport "Duty Free" shop in limited quantity and dimension • Food for infants necessary during the journey • One carry-cot or folding pram • One folding wheelchair, a set of crutches or similar devices on which a disabled passenger may dependant.
+                            
+                            For all Arik Air flights, the hand baggage allowance is ONE PIECE weighing a maximum of 6kg in weight ONLY (maximum dimensions allowed are 55cms x 35cms x 25cms).
+                            
+                            On ALL International flights departing Nigeria there is a 100% ban on all liquids and gels in hand baggage.
+                            
+                            Guests travelling out of Lagos to New York JFK must anticipate enhanced security measures and as such should arrive at the airport for check in and security processing 4 hours before departure time. Passengers are advised that ONE PIECE ONLY of hand baggage may be taken into the aircraft cabin.
+                            
+                            Checked in free baggage allowance.
+                            
+                            Checked in baggage includes all those items which are weighted and carried in the aircraft and are not accessible to passengers during flight. It must consist of suitcases or containers that are sufficiently rigid and resistant to the stress caused by normal handling so as to ensure safe transport without special requirements.
+                            
+                            There is no checked in baggage allowance for infants, only hand baggage will be accepted. Free baggage allowance detailed information is published in Arik Air Checked Baggage Policy document.
+                            
+                            To comply with Health & Safety requirements, Arik Air Limited has instituted a maximum weight for single items of checked baggage. Arik Air will not accept baggage that exceeds 30kg (661bs) in weight, per any single piece of baggage (except Lagos-Freetown-Banjul-Dakar route and v.v.). This policy relates only to single items of baggage and does not affect your overall baggage allowance reflected on your ticket, which remains unchanged.
+                            
+                            Excess baggage
+                            
+                            You will be required to pay an extra charge for carriage of baggage in excess of the free baggage allowance (as stipulated in our conditions and limitations). These rates are published in Arik Air
+                            
+                            Checked Baggage Policy document.
+                            
+                            Excess baggage charges are collected in the local currency. Carriage of excess baggage is subject to available space on your flight. The total number of bags allowed for any passenger is up to 10 pieces per passenger.
+                            
+                            Special baggage
+                            
+                            It is permitted to transport ski equipment, golf bags, surfs and windsurfs, bicycle etc, as registered baggage against space availability and payment of special excess baggage supplement. Contact your travel agent, the nearest Arik Air ticket office or Call Center for more information.
+                            
+                            Prohibited items</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="alert alert-light"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- modal for terms & conditions -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="alert alert-light"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
