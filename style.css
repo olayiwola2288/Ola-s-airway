@@ -19,7 +19,7 @@ header{
     justify-content: space-between;
 }
 
-body {
+#body1 {
     background-image: url(images/pexels-quintin-gellar-321159.jpg);
     background-attachment: fixed;
     background-position: center;
@@ -68,34 +68,74 @@ nav a:hover {
     background-color: rgba(10, 49, 82, 0.8);
     padding: 60px 0 120px;
 }
-#imagesBackHover:hover{
+#imagesBackHover{
+    height: 100%;
+    width: 0;
     background-color: rgba(10, 49, 82, 0.8);
-    padding: 60px 0 230px;
-    /* display: none; */
-    transition: 30ms ease-in;
+    transition: .4s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagesBack:hover #imagesBackHover {
+    width: 100%;
 }
 .imgText {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .cityContainer {
-    overflow: hidden;
-    transition: 4s ease-in-out !important;
+    overflow: hidden !important;
+    transition: 4s ease-in-out;
 }
+
 
 .cityContainer:hover img {
     transform: scale(1.5);
 }
 #imagesBack{
     background-image: url(images/9.jpg);
-    height: 500px;
-    width: 450px;
+    height: 35%;
+    width: 35%;
     object-fit: fill;
-    /* background-attachment: fixed; */
     background-position: center;
-    
+}
+@media screen and (max-width: 600px) {
+    #imagesBack{
+        background-image: url(images/9.jpg);
+        height: 35%;
+        width: 100%;
+        object-fit: fill;
+        background-position: center;
+    }
+}
+#newSeach{
+    background-color:#34000D;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 20px;
 
-
+}
+.dateBox{
+    color: #fff;
+    background-color: rgb(13, 63, 132);
+    padding: 20px 40px;
+}
+.dateBox:hover{
+    background-color:rgb(37, 48,130) ;
+}
+.flightInfo{
+    background-color: #5C0036;
+    color: #fff;
 }
 
 
+#from, #to, #departure {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    border-left: 1px solid grey;
+}
